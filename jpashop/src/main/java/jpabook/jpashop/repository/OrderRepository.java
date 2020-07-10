@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 @Repository
@@ -22,5 +25,13 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
-//    public List<Order> findAll(OrderSearch orderSearch) {};
+    /**
+     * JPA Criteria
+     */
+//    public List<Order> findAll(OrderSearch orderSearch) {
+//        CriteriaBuilder cb = em.getCriteriaBuilder();
+//        CriteriaQuery<Order> cq = cb.createQuery(Order.class);
+//        Root<Order> o = cq.from(Order.class);
+//
+//    };
 }

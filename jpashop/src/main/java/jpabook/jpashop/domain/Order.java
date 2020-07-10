@@ -18,6 +18,9 @@ import static javax.persistence.FetchType.LAZY;
 @Setter
 public class Order {
 
+    protected Order() {
+    }
+
     @Id @GeneratedValue
     @Column(name = "order_id")
     private Long id;
